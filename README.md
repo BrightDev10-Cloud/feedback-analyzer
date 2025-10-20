@@ -44,16 +44,7 @@ We'll build a web dashboard that lets users submit feedback, stores it in the cl
 
 - Gather sample user feedback data—create a simple CSV called feedback.csv (Example below):
 
-```bash
-    {
-        feedback_text sentiment
-        {
-            "Love the design!" positive
-            "Needs improvement." negative
-            "Okay experience overall." neutral
-        }
-    }
-```
+![alt text](image-1.png)
 
 - Save this file locally. Then upload it to your S3 bucket:
 
