@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feedback Analyzer</title>
+  </head>
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet"
+  />
+  <body>
+    <div class="main_container">
+      <section class="main_section">
+        <div class="upper">
+          <div class="box">
+            <div class="logo">
+              <div class="logo_text">
+                <dotlottie-wc
+                  src="https://lottie.host/82c14b80-374f-4197-9bc0-4a7272f006da/qQEYBdoVfq.lottie"
+                  style="width: 30px; height: 30px"
+                  autoplay
+                  loop
+                ></dotlottie-wc>
+              </div>
+              <h2>Feedback Analyzer</h2>
+            </div>
+          </div>
+          <div class="box">
+            <div id="clock"></div>
+          </div>
+        </div>
+        <div class="main_content">
+          <div class="summary center" id="dashboardSummary">
+            Welcome! Enter your feedback to test out our sentiment AI. Your
+            feedback powers smarter analytics for our product teams.
+          </div>
+          <div class="feedback">
+            <div class="input_area">
+              <div class="input_field">
+                <textarea
+                  class="input_box"
+                  id="feedbackInput"
+                  rows="3"
+                  placeholder="e.g. I love the app!"
+                ></textarea>
+              </div>
+              <div class="lower_input_area">
+                <div id="result"><span></span></div>
+                <button class="analyze_btn" onclick="analyze()">Analyze</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="lower">
+          <div class="box lower_box center">
+            <label for="sentimentChart">Sentiment Chart</label>
+            <canvas id="sentimentChart" width="360" height="150"></canvas>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+
+  <script src="script.js"></script>
+  <script src="animations.js"></script>
+  <script
+    src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.5/dist/dotlottie-wc.js"
+    type="module"
+  ></script>
+</html>

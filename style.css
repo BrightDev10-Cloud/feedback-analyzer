@@ -1,0 +1,222 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --primary-color: #011a02b4;
+  --secondary-color: #314366;
+  --background-color: #f2f7f8;
+  --text-color: #333;
+  --font-family: 'Lato', sans-serif;
+}
+.main_container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+}
+.main_section {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* background: #333; */
+  margin: 0 auto;
+  justify-content: space-between;
+}
+.upper {
+  width: 100%;
+  height: auto;
+  padding: 1rem 2rem;
+  /* background: yellow; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.box {
+  width: 40%;
+  height: auto;
+  padding: 2rem 3rem;
+  /* background: #8aad0d; */
+}
+.logo {
+  display: flex;
+  gap: 0.1rem;
+  align-items: center;
+}
+.logo_text {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--text-color);
+  /* border: 0.5px solid #9b9999c7; */
+  border-radius: 5px;
+  padding: 0.3rem 0.3rem;
+  /* background-color: var(--primary-color); */
+  color: whitesmoke;
+}
+.main_content {
+  width: auto;
+  height: auto;
+}
+.analyze_btn:hover {
+  background: transparent;
+  border: #011a02b4 solid 1px;
+  color: var(--primary-color);
+}
+.feedback {
+  width: 800px;
+  padding: 1rem 2rem;
+  margin: 0 auto;
+}
+.input_area {
+  width: auto;
+  height: auto;
+  margin-top: 0.5rem;
+  border: #9b9999c7 solid 0.1px;
+  border-radius: 10px;
+  padding: 0.3rem 0.3rem;
+}
+.input_box {
+  width: 100%;
+  height: auto;
+  padding: 0.2rem 1rem;
+  border: none;
+  outline: none;
+  background: transparent;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+.lower {
+  width: 100%;
+  height: auto;
+  padding: 1rem 2rem;
+  /* background: orange; */
+  display: flex;
+  flex: row;
+  justify-content: space-between;
+}
+.lower_input_area button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  background: var(--primary-color);
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.lower_input_area {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.canvas {
+  width: auto;
+  height: auto;
+}
+canvas {
+  margin-top: 20px;
+  max-width: 100%;
+  /* border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(40, 45, 82, 0.09);
+  padding: 8px 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(10px);
+  font-family: var(--body-text); */
+}
+.center {
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Clock */
+#clock {
+  padding: 20px;
+  border: none;
+  border-radius: 15px;
+  font-family: monospace;
+  font-size: 1rem;
+  display: flex;
+  padding-left: 24rem;
+}
+.summary {
+  background: #fdfdfd;
+  font-size: 1rem;
+  border-radius: 9px;
+  margin-bottom: 18px;
+  padding: 12px 18px;
+  color: var(--secondary-color);
+  border: 1px solid #e2e6f8;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  width: fit-content;
+}
+label {
+  font-weight: 500;
+  color: #314366;
+  margin-bottom: 0.4rem;
+  display: block;
+}
+
+/* Responsiveness */
+@media (max-width: 550px) {
+  .feedback {
+    width: 350px;
+    padding: 0.5rem 0.5rem;
+    margin: 0 auto;
+  }
+  .input_box {
+    width: 100%;
+    height: auto;
+    padding: 0.2rem 0.2rem;
+    border: none;
+    outline: none;
+    background: transparent;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+  }
+  .lower_input_area button {
+    font-size: 1rem;
+  }
+  #result {
+    font-size: 1rem;
+  }
+  #clock {
+    padding: 20px;
+    border: none;
+    border-radius: 15px;
+    font-family: monospace;
+    font-size: 1rem;
+    display: flex;
+    padding-left: 2rem;
+  }
+  .box {
+    width: 50%;
+    height: auto;
+    padding: 0.1rem 0.1rem;
+  }
+  .lower_box {
+    width: 100%;
+    height: auto;
+  }
+  #clock {
+    font-size: 0.8rem;
+  }
+  .logo h2 {
+    font-size: 1rem;
+  }
+  .logo_text {
+    width: auto;
+  }
+  .upper {
+    flex-direction: row;
+    gap: 1rem;
+    width: 100%;
+    padding: 0.5rem 0rem;
+  }
+  .main_container {
+    width: 100%;
+  }
+}
